@@ -1,0 +1,46 @@
+body {
+    background-color: black;
+    font-family: 'Cedarville Cursive', cursive;
+}
+
+.cell {
+  margin:10px;
+  color: white;
+  text-align:center;
+  transition: transform .2s;
+}
+
+.cell:hover {
+    transform: scale(1.1);
+}
+
+#title {
+    text-align: center;
+    color: yellow;
+}
+
+#row1 {
+  display:flex;
+  justify-content:center;
+}
+
+#row2 {
+    display:flex;
+    justify-content:center;
+}
+
+#i1 {
+      border-top-left-radius: 50px;
+}
+
+#i2 {
+      border-top-right-radius: 50px;
+}
+
+#i3 {
+      border-bottom-left-radius: 50px;
+}
+
+#i4 {
+      border-bottom-right-radius: 50px;
+}
