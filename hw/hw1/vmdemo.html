@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<!--
+
+First Website
+and comment
+in html^^^
+(comments can span multiple lines)
+
+-->
+
+<!-- This is the head -->
+<!-- All styles and javascript go inside the head -->
+    <head>
+        <meta charset="utf-8">
+        <title>Virtualization and Virtual Machines</title>
+        <link href="hw1.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    </head>
+    
+    <body>
+        
+        <header>
+            <h1>Virtualization</h1>
+        </header>
+        
+        <nav>
+            
+            <a href="index.html">Home</a>
+            <a href="applications.html">Applications</a>
+            <a href="tools.html">Tools</a>
+            <a href="vmdemo.html">VM Setup</a>
+            
+        </nav>
+        </br>
+        <main id="vmdemo_main">
+            <div>
+                <p>If you are interested in creating virtual machines, VirtualBox can be downloaded for free from <a href="https://www.virtualbox.org/wiki/Downloads">Oracle</a> and is compatible with Windows, OS X, Linux, and Solaris</p>
+            </div>
+            <div id="vbox_manager_container">
+                <img id="vbox_manager_image" src="../../img/manager.JPG" />
+            </div>
+            <div>
+                <p>New virtual machines can be created by clicking on the 'New' button in the top left corner of the VirtualBox window. The machine can be named, and the planned operating system selected.</p>
+            </div>
+            <div id="create_image_container">
+                <img id="create_image" src="../../img/create.JPG" />
+            </div>
+            <div>
+                <p>After naming and selecting the operating system for the machine, resources must be allocated for the machine, starting with memory. The virtual machine's resource usage cannot exceed the amount of hardware resources available from the host machine.</p>
+            </div>
+            <div id="memory_image_container">
+                <img id="memory_image" src="../../img/memory.JPG" />
+            </div>
+            <div>
+                <p>A virtual hard disk will need to be used for the virtual machine. If you are creating a completely new virtual machine, you will probably want to create a new virtual hard disk rather than use an existing one.</p>
+            </div>
+            <div id="vdi__image_container">
+                <img id="vdi_image" src="../../img/vdi.JPG" />
+            </div>
+            <div>
+                <p>Just like there are different formats for certain files, there are different formats for virtual disks. If you plan on using another virtualization tool (such as VMware Workstation), then you want to be conscious of the format picked here. If you only plan on using VirtualBox, then the standard VDI format is fine.</p>
+            </div>
+            <div id="type_image_container">
+                <img id="type_image" src="../../img/type.JPG" />
+            </div>
+            <div>
+                <p>Here you have the option between a dynamically allocated virtual hard disk and a fixed size for the disk. Dynamically allocated disks will only use storage space when they absolutely need it, while fixed size disks reserve space on the disk for future use, even if that space is not currently being used.</p>
+            </div>
+            <div id="fixed_image_container">
+                <img id="fixed_image" src="../../img/fixed.JPG" />
+            </div>
+            <div>
+                <p>Here is where you have the option to choose where the virtual disk file gets stored on the host machine. Additionally, here is where you can assign how much storage you would like for your virtual machine to have.</p>
+            </div>
+            <div id="locsize_image_container">
+                <img id="locsize_image" src="../../img/locsize.JPG" />
+            </div>
+            <div>
+                <p>The virtual machine has finally been created! Only the operating system install remains.</p>
+            </div>
+            <div id="newmachine_image_container">
+                <img id="newmachine_image" src="../../img/newmachine.JPG" />
+            </div>
+            <div>
+                <p>Just like building a new PC, a boot medium is required so that the virtual machine knows what it needs to be running. Here is where you can provide a disk image (.iso) to be used as the boot medium. This is the final step in creating a virtual machine before getting into OS specific setup. Congratulations!</p>
+            </div>
+            <div id="boot_image_container">
+                <img id="boot_image" src="../../img/boot.JPG" />
+            </div>
+        </main>
+        </br>
+        <footer>
+            
+            <p>&copy; 2019 Ryan Ramirez - CST 336 Internet Programming</p>
+            <strong>This webpage is being used solely for educational purposes.</strong>
+            </br>
+            <img src="../../img/csumb_logo.png" alt="CSUMB Logo" />
+            
+        </footer>
+    </body>
+    
+</html>

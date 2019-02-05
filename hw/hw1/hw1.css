@@ -1,0 +1,70 @@
+body {
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+}
+
+div {
+    float:left;
+}
+
+#homepage_text {
+    width:400px;
+    padding:20px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav {
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    padding:15px;
+    padding-bottom:4px;
+    font-size: 1.8em;
+    text-decoration: none;
+    color:white;
+}
+
+nav a:hover {
+    border-bottom: 2px white solid;
+    font-size: 2em;
+    transition: .9s;
+}
+
+#homepage_main {
+    width:1200px;
+    margin: 0 auto;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#applications_main {
+    width: 1080px;
+    margin: 0 auto;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#tools_main {
+    width:450px;
+    margin: 0 auto;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#vmdemo_main {
+    clear:left;
+    width:1000px;
+    margin: 0 auto;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#homepage_image, #applications_image {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+footer {
+    clear:left;
+    text-align:center;
+}
