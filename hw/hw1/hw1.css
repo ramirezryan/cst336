@@ -24,12 +24,13 @@ nav {
     font-size: 1.8em;
     text-decoration: none;
     color:white;
+    transition: transform .2s;
 }
 
 nav a:hover {
     border-bottom: 2px white solid;
     font-size: 2em;
-    transition: .9s;
+    transform: scale(1.1);
 }
 
 #homepage_main {
@@ -42,6 +43,7 @@ nav a:hover {
     width: 1080px;
     margin: 0 auto;
     font-family: 'Ubuntu', sans-serif;
+    text-align-last: center;
 }
 
 #tools_main {
@@ -71,5 +73,5 @@ section {
 
 footer {
     clear:left;
-    text-align:center;
+    text-align: center;
 }
