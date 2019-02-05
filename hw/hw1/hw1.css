@@ -64,6 +64,11 @@ nav a:hover {
     border-bottom-right-radius: 50px;
 }
 
+section {
+    clear:left;
+    text-align: center;
+}
+
 footer {
     clear:left;
     text-align:center;
