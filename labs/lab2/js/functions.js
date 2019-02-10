@@ -20,14 +20,19 @@ guessField.focus(); // Target the cursor at the input box.
 function checkGuess() {
     var userGuess = Number(guessField.value);
     if (guessCount === 1) {
-        $('#guesses').html('Previous Guesses: ');
+        //$('#guesses').html('Previous Guesses: ');
+        guesses.innerHTML = "Previous Guesses: ";
     }
-    $('#guesses').append(userGuess + ' ');
+    //$('#guesses').append(userGuess + ' ');
+    guesses.innerHTML += userGuess + ' ';
     
     if (userGuess === randNum) {
-        $('#lastResult').html('Congratulations! You guessed the right number!');
-        $('lastResult').css("background-color", green);
-        $('lowOrHigh').html('');
+        //$('#lastResult').html('Congratulations! You guessed the right number!');
+        lastResult.innerHTML = "Congratulations!";
+        //$('lastResult').css("background-color", green);
+        lastResult.style.backgroundColor = "green";
+        //$('lowOrHigh').html('');
+        lowOrHigh.innerHTML = '';
         totalWins += 1;
         setGameOver();
     } else if (guessCount === 7) {
