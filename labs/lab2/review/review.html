@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Review</title>
+        
+        <script>
+            
+            function doMagic(){
+                //alert("it's working");
+                document.getElementById("cat_image").src = "img/now_you_dont.png";
+                document.getElementById("message").style.color = "red";
+                document.getElementById("message").innerHTML = "now you don't";
+                document.getElementById("disappearBtn").style.display = "none";
+                document.getElementById("reappearBtn").style.display = "block";
+            }
+            
+            function returnCat() {
+                document.getElementById("cat_image").src = "img/now_you_see_me.png";
+                document.getElementById("message").style.color = "black";
+                document.getElementById("message").innerHTML = "now you see me";
+                document.getElementById("reappearBtn").style.display = "none";
+                document.getElementById("disappearBtn").style.display = "block";
+            }
+            
+        </script>
+        
+        <style>
+            #reappearBtn {
+                display:none;
+            }
+        </style>
+        
+        
+    </head>
+    <body>
+        <img id="cat_image" src="img/now_you_see_me.png" alt="cat">
+        <br />
+        <span id="message">Now you see me</span>
+        <br />
+    </body>
+    <button id="disappearBtn" onClick="doMagic()">Click Me!</button>
+    <button id="reappearBtn" onClick="returnCat()">See me again</button>
+</html>
