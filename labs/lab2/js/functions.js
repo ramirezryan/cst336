@@ -20,11 +20,11 @@ guessField.focus(); // Target the cursor at the input box.
 function checkGuess() {
     var userGuess = Number(guessField.value);
     if (guessCount === 1) {
-        //$('#guesses').html('Previous Guesses: ');
-        guesses.innerHTML = "Previous Guesses: ";
+        $('#guesses').html('Previous Guesses: ');
+        //guesses.innerHTML = "Previous Guesses: ";
     }
-    //$('#guesses').append(userGuess + ' ');
-    guesses.innerHTML += userGuess + ' ';
+    $('#guesses').append(userGuess + ' ');
+    //guesses.innerHTML += userGuess + ' ';
     
     if (userGuess === randNum) {
         //$('#lastResult').html('Congratulations! You guessed the right number!');

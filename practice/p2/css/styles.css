@@ -1,0 +1,40 @@
+body{
+    font-family: Helvetica;
+}
+#Banner{
+    margin-top: -50px;
+    height: 75px;
+    width: stretch;
+    margin-left: -9px;
+    margin-right: -11px;
+    background-color: #133b7a;
+    color: white;
+ 
+    padding-left:50px;
+    
+    
+   
+}
+#text{
+    padding-top: 25px;
+}
+section{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.programs{
+   
+    float:left;
+    margin-left: 15px;
+   
+    font-size: 18pt;
+}
+#main{
+    margin-left: 12px;
+    margin-right:25px;
+}
+#minors{
+    margin-left:12px;
+    font-size: 14pt;
+    clear:left;
+}
