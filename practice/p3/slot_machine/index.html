@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slot Machine</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    
+    <body>
+    
+        <h1>Slot Machine</h1> 
+        <div id = "image1"></div>
+        <div id = "image2"></div>
+        <div id = "image3"></div>
+        
+        
+        <div id = "Play">
+        <button>Play</button>
+        </div>
+        
+        <div id="message">
+        </div>
+        <div id="totalWinnings">
+        </div>
+        
+        <script>
+        let imageArray = ["cherry","grapes","seven"];
+        var randomImage;
+        let totalWinnings = 0;
+        
+        $("#Play").on("click" , function() {
+            let randomIndex1 = Math.floor(Math.random() * 3);
+            randomImage = imageArray[randomIndex1];
+            $("#image1").html("<img src = 'img/" + randomImage+".png' />");
+            
+            let randomIndex2 = Math.floor(Math.random() * 3);
+            randomImage = imageArray[randomIndex2];
+            $("#image2").html("<img src = 'img/" + randomImage+".png' />");
+            
+            let randomIndex3 = Math.floor(Math.random() * 3);
+            randomImage = imageArray[randomIndex3];
+            $("#image3").html("<img src = 'img/" + randomImage+".png' />");
+            
+            if (randomIndex1 == 0 && randomIndex2 == 0 && randomIndex3 == 0) {
+                $("#message").html("Congratulations!");
+                totalWinnings += 100;
+                $("#totalWinnings").html("Total Winnings: $" + totalWinnings);
+            } else if (randomIndex1 == 1 && randomIndex2 == 1 && randomIndex3 == 1) {
+                $("#message").html("Congratulations!");
+                totalWinnings += 300;
+                $("#totalWinnings").html("Total Winnings: $" + totalWinnings);
+            } else if (randomIndex1 == 2 && randomIndex2 == 2 && randomIndex3 == 2) {
+                $("#message").html("Jackpot!");
+                totalWinnings += 500;
+                $("#totalWinnings").html("Total Winnings: $" + totalWinnings);
+            } else {
+                $("#message").html("Try again!");
+                $("#totalWinnings").html("Total Winnings: $" + totalWinnings);
+            }
+        });
+        
+        </script>
+    </body>
+    
+</html>

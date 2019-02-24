@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+    background-color: #c9ecff;
+}
+
+.correct {
+    color: green;
+    font-size: 10pt;
+}
+
+.incorrect {
+    color: red;
+    font-size: 18pt;
+}
