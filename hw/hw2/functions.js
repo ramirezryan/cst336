@@ -86,6 +86,6 @@ $("#submitButton").on("click" , function() {
         total += 220;
         
     $("#total").html("Total: $" + total);
-    $("#preview_text").html("If we recognized your color, here's a sample of the it that that you picked for your case:");
+    $("#preview_text").html("If we recognized your color, here's a sample of it that that you picked for your case:");
     $("#color_preview").css("background-color", color_choice);
 });
