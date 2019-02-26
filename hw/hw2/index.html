@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PC Build</title>
+        <!--Bootstrap files-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>PC Builder</h1>
+        </header>
+        
+        <section>
+            <h2><span id="cpu_prompt"></span>CPU:</h2>
+            <input type="radio" name="cpu_radio" id="intel" value="intel"><label for="intel">intel</label>
+            <input type="radio" name="cpu_radio" id="amd" value="AMD"><label for="amd">AMD</label>
+            <div id="cpu_feedback">
+            </div>
+        </section>
+        
+        <section>
+            <h2><span id="ram_prompt"></span>MEMORY:</h2>
+            <select id="ram_select">
+                <option>Select One</option>
+                <option>2 GB</option>
+                <option>4 GB</option>
+                <option>8 GB</option>
+                <option>16 GB</option>
+                <option>32 GB</option>
+            </select>
+            <div id="ram_feedback">
+            </div>
+        </section>
+        
+        <section>
+            <h2><span id="gpu_prompt"></span>GRAPHICS:</h2>
+            <input type="radio" name="gpu_radio" id="gtx1070" value="gtx1070"><label for="gtx1070">GTX 1070</label>
+            <input type="radio" name="gpu_radio" id="gtx1080" value="gtx1080"><label for="gtx1080">GTX 1080</label>
+            <input type="radio" name="gpu_radio" id="rtx1070" value="rtx1070"><label for="rtx1070">RTX 1070</label>
+            <input type="radio" name="gpu_radio" id="rtx1080" value="rtx1080"><label for="rtx1080">RTX 1080</label>
+            <div id="gp_feedback">
+            </div>
+        </section>
+        
+        <section>
+            <h2><span id="disk_prompt"></span>STORAGE DEVICE:</h2>
+            <h5>( more than one can be selected )</h5>
+            <input type="checkbox" id="hdd500gb"><label for="hdd500gb">500 GB HDD</label>
+            <br/>
+            <input type="checkbox" id="hdd1tb"><label for="hdd1tb">1 TB HDD</label>
+            <br/>
+            <input type="checkbox" id="ssd500gb"><label for="ssd500gb">500 GB SSD</label>
+            <br/>
+            <input type="checkbox" id="ssd1tb"><label for="ssd1tb">1 TB SSD</label>
+            <br/>
+            <div id="disk_feedback">
+            </div>
+        </section>
+        
+        <section>
+            <h2><span id="mc_prompt"></span>MOTHERBOARD AND CASE FORM FACTOR:</h2>
+            <input type="radio" name="mc_radio" id="micro" value="micro"><label for="micro">Micro ATX</label>
+            <input type="radio" name="mc_radio" id="mini" value="mini"><label for="mini">Mini ITX</label>
+            <input type="radio" name="mc_radio" id="atx" value="atx"><label for="atx">ATX</label>
+            <div id="mc_feedback">
+            </div>
+        </section>
+        
+        <section>
+            <h2><span id="color_prompt"></span>CASE COLOR:</h2>
+            <input type="text" id="color_text">
+            <div id="color_feedback">
+            </div>
+        </section>
+        
+        <section>
+            <button id="submitButton">Submit</button>
+            <h2 id="total"></h2>
+            <h3 id="preview_text"></h3>
+            <div id="color_preview">
+            </div>
+        </section>
+        
+    </body>
+    <script src="functions.js"></script>
+</html>
