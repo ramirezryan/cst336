@@ -3,6 +3,9 @@
 <head>
 <title> Sign Up Page </title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <script>
     
@@ -37,21 +40,23 @@
             
             
         });
-        
-        
-        $("#zipCode").on("change", function(){
-            
-            //alert(  $("#zipCode").val()  );
-            
+        $("#username").on("change", function() {
+
             $.ajax({
                 type: "GET",
-                url: "http://itcdland.csumb.edu/~milara/ajax/cityInfoByZip.php",
+                url: "http://myspace.csumb.edu/~milara/ajax/username/usernameLookup.php",
                 dataType: "json",
-                data: { "zip": $("#zipCode").val() },
+                data: { "username": $("#username").val() },
                 success: function(data,status) {
-                  //alert(data.city);
-                  $("#city").html(data.city);
-                    $("#longitude").html(data.longitude);
+                  if(data.available != "true")
+                  {
+                      $("#usernameAvail").html("Taken");
+                      $("#usernameAvail").css("color", "red");
+                  }
+                  else {
+                      $("#usernameAvail").html("Available!");
+                      $("#usernameAvail").css("color", "green");
+                  }
                 },
                 complete: function(data,status) { //optional, used for debugging purposes
                   // alert(status);
@@ -60,10 +65,102 @@
             });//ajax
             
             
-        });//zipCode
+        });//username change
+        
+        
+        $("#zipCode").on("change", function(){
+            
+            $.ajax({
+                type: "GET",
+                url: "http://itcdland.csumb.edu/~milara/ajax/cityInfoByZip.php",
+                dataType: "json",
+                data: { "zip": $("#zipCode").val() },
+                success: function(data,status) {
+                  if(data.city == null)
+                  {
+                      $("#zipError").html("Zip does not exist.");
+                      $("#city").html("");
+                      $("#longitude").html("");
+                      $("#latitude").html("");
+                      return;
+                  }
+                  $("#city").html(data.city);
+                  $("#longitude").html(data.longitude);
+                  $("#latitude").html(data.latitude);
+                  $("#zipError").html("");
+                
+                },
+                complete: function(data,status) { //optional, used for debugging purposes
+                  // alert(status);
+                }
+                
+            });//ajax
+            
+            
+        });//zipCode change
+        
+
+    $("#submitButt").on("click", function(){
+            
+            //alert(  $("#zipCode").val()  );
+            
+            $.ajax({
+                type: "GET",
+                url: "http://myspace.csumb.edu/~milara/ajax/username/usernameLookup.php",
+                dataType: "json",
+                data: { "username": $("#username").val() },
+                success: function(data,status) {
+                  
+                  //Clearing spans
+                  $("#passwordRequirements").html("");
+                  $("#usernameAvail").html("");
+                  $("#passwordMatch").html("");
+                  $("#submitStatus").html("");
+
+                  var error = false;
+                  if(data.available != "true")
+                  {
+                      $("#usernameAvail").html("Taken");
+                      $("#usernameAvail").css("color", "red");
+                      error = true;
+
+                  }
+                  else {$("#usernameAvail").html("Available!");}
+                  if($("#password1").val().length < 6)
+                  {
+                      $("#passwordRequirements").html("Password does not meet requirements");
+                      $("#passwordRequirements").css("color", "red");
+                      error = true;
+                  }
+                  if($("#password1").val() != $("#password2").val())
+                  {
+                      $("#passwordMatch").html("Passwords do not match");
+                      $("#passwordMatch").css("color", "red");
+                      error = true;
+                  }
+                  if($("#username").val().length < 4)
+                  {
+                      $("#usernameAvail").html("Username Does not meet requirements");
+                      $("#usernameAvail").css("color", "red");
+                      return;
+                  }
+                  if(error == false)
+                    {
+                        $("#submitStatus").html("Success");
+                    }
+                  
+                
+                },
+                complete: function(data,status) { //optional, used for debugging purposes
+                  // alert(status);
+                }
+                
+            });//ajax
+            
+            
+        });//onSubmit
         
     } ); //document.ready()
-    
         
     
 </script>
@@ -79,10 +176,10 @@
         Last Name: <input type="text"><br> 
         Email: <input type="text"><br> 
         Phone Number:<input type="text"><br><br>
-        Zip Code: <input type="text" id="zipCode"><br>
+        Zip Code: <input type="text" id="zipCode"> <span id="zipError"></span> <br> 
         City: <span id="city"></span>
         <br>
-        Latitude: 
+        Latitude: <span id="latitude"></span>
         <br>
         Longitude: <span id="longitude"></span>
         <br><br>
@@ -97,10 +194,10 @@
         
         Select a County: <select id="county"></select><br>
         
-        Desired Username: <input type="text"><br>
-        Password: <input type="password"><br>
-        Type Password Again: <input type="password"><br>
-        <input type="submit" value="Sign up!">
+        Desired Username: <input type="text" id = "username"><span id="usernameAvail"></span><br>
+        Password: <input type="password" id = "password1"><span id = "passwordRequirements"></span><br>
+        Type Password Again: <input type="password" id = "password2"><span id = "passwordMatch"></span><br>
+        <input type="submit"  id = "submitButt" value="Sign up!"><span id = "submitStatus"></span>
         </fieldset>
 
 </body>
