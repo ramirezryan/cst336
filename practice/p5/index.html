@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Practice 5: Like/Dislike Video App</title>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+</head>
+<body>
+
+  <!--Embed here any YouTube video using the "iframe" tag -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/M7XM597XO94" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <div>
+    <button id="like">
+      <img src="img/like.png" alt="Like button" width="35" />
+    </button>
+      <button id="dislike">
+      <img src="img/dislike.png" alt="Dislike button" width="35" />
+    </button>
+    
+    <!--The number of likes is displayed within the span below-->
+    <span id="likes"></span>
+    <span id="dislikes"></span>
+  </div>
+
+</body>
+<script>
+
+  //This AJAX call returns a number of "likes" and "dislikes"
+  //Enter a YouTube video id for "data".
+  var likes = 0;
+  var dislikes = 0;
+  var lBit = 0;
+  var dBit = 0;
+  
+  function ajaxCall(action) {
+    if (action == "like") {
+      likes++;
+      $("#likes").html(likes);
+    } else if (action == "cancel_like") {
+      likes--;
+      $("#likes").html(likes);
+    } else if (action == "dislike") {
+      dislikes++;
+      $("#dislikes").html(dislikes);
+    } else if (action == "cancel_dislike") {
+      dislikes--;
+      $("#dislikes").html(dislikes);
+    }
+  }
+  
+	$.ajax({
+            type: "get",
+            url:  "https://cst336.herokuapp.com/projects/api/videoLikesAPI.php",
+            dataType: "json",
+            data: { "videoId": "M7XM597XO94" },  //   <----AS THE VALUE, ENTER THE YOUTUBE VIDEO ID
+            
+            success: function(data,status) {
+                 likes = parseInt(data.likes);
+                 $("#likes").html(likes);
+                 dislikes = parseInt(data.dislikes);
+                 $("#dislikes").html(data.dislikes);
+              },
+              complete: function(data,status) { 
+                  //alert(status);
+              }
+         });
+         
+  $("#like").on("click" , function() {
+    if (lBit == 0 && dBit == 0) {
+      ajaxCall("like");
+      lBit = 1;
+    } else if (lBit == 1 && dBit == 0) {
+      ajaxCall("cancel_like");
+      lBit = 0;
+    }
+  });
+  
+  $("#dislike").on("click" , function() {
+    if (dBit == 0 && lBit == 0) {
+      ajaxCall("dislike");
+      dBit = 1;
+    } else if (dBit == 1 && lBit == 0) {
+      ajaxCall("cancel_dislike");
+      dBit = 0;
+    }
+  });
+	
+</script>
+</html>
