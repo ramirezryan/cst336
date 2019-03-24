@@ -1,9 +1,9 @@
 <?php
 
-$host = "localhost";
-$dbname = "ottermart";
-$username = "root";
-$password = "";
+$host = "us-cdbr-iron-east-03.cleardb.net";
+$dbname = "heroku_2a82e3ada2013ec";
+$username = "b04c3ea880440e";
+$password = "77573882";
 
 // Establishing a connection
 $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
