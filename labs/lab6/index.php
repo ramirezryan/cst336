@@ -46,7 +46,6 @@
                 });
                 
                 $("#searchForm").on("click", function() {
-                    alert("clicked");
                     $.ajax({
                         type: "GET",
                         url: "api/getSearchResults.php",
@@ -59,7 +58,6 @@
                             "orderBy" : $("[name=orderBy]:checked").val(),
                         },
                         success: function(data, status) {
-                            alert("success");
                             $("#results").html("<h3> Products Found </h3>");
                             data.forEach(function(key) {
                                 $("#results").append("<a href='#' class='historyLink' id='" + key['productId'] + "'>History</a>");
