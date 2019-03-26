@@ -1,0 +1,5 @@
+[25-Mar-2019 19:31:37 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'midterm.mp_products' doesn't exist' in /home/ubuntu/workspace/cst336/practice/midtermPractice/api/getProducts.php:6
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/practice/midtermPractice/api/getProducts.php(6): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/practice/midtermPractice/api/getProducts.php on line 6
