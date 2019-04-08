@@ -1,0 +1,82 @@
+[02-Apr-2019 23:46:49 UTC] PHP Warning:  include(../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 6
+[02-Apr-2019 23:46:49 UTC] PHP Stack trace:
+[02-Apr-2019 23:46:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:46:49 UTC] PHP Warning:  include(): Failed opening '../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 6
+[02-Apr-2019 23:46:49 UTC] PHP Stack trace:
+[02-Apr-2019 23:46:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:46:49 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 8
+[02-Apr-2019 23:46:49 UTC] PHP Stack trace:
+[02-Apr-2019 23:46:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:47:18 UTC] PHP Warning:  include(../../inc/dbConn.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 6
+[02-Apr-2019 23:47:18 UTC] PHP Stack trace:
+[02-Apr-2019 23:47:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:47:18 UTC] PHP Warning:  include(): Failed opening '../../inc/dbConn.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 6
+[02-Apr-2019 23:47:18 UTC] PHP Stack trace:
+[02-Apr-2019 23:47:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:47:18 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 8
+[02-Apr-2019 23:47:18 UTC] PHP Stack trace:
+[02-Apr-2019 23:47:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:48:03 UTC] PHP Warning:  include(../../dbConn.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 3
+[02-Apr-2019 23:48:03 UTC] PHP Stack trace:
+[02-Apr-2019 23:48:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:48:03 UTC] PHP Warning:  include(): Failed opening '../../dbConn.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 3
+[02-Apr-2019 23:48:03 UTC] PHP Stack trace:
+[02-Apr-2019 23:48:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:48:03 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 5
+[02-Apr-2019 23:48:03 UTC] PHP Stack trace:
+[02-Apr-2019 23:48:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:48:35 UTC] PHP Warning:  include(../../dbConn.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 6
+[02-Apr-2019 23:48:35 UTC] PHP Stack trace:
+[02-Apr-2019 23:48:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:48:35 UTC] PHP Warning:  include(): Failed opening '../../dbConn.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 6
+[02-Apr-2019 23:48:35 UTC] PHP Stack trace:
+[02-Apr-2019 23:48:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:48:35 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 8
+[02-Apr-2019 23:48:35 UTC] PHP Stack trace:
+[02-Apr-2019 23:48:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:50:24 UTC] PHP Warning:  include(../../dbConn.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 6
+[02-Apr-2019 23:50:24 UTC] PHP Stack trace:
+[02-Apr-2019 23:50:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:50:24 UTC] PHP Warning:  include(): Failed opening '../../dbConn.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 6
+[02-Apr-2019 23:50:24 UTC] PHP Stack trace:
+[02-Apr-2019 23:50:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:50:24 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 8
+[02-Apr-2019 23:50:24 UTC] PHP Stack trace:
+[02-Apr-2019 23:50:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:50:37 UTC] PHP Warning:  include(../../dbConn.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 6
+[02-Apr-2019 23:50:37 UTC] PHP Stack trace:
+[02-Apr-2019 23:50:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:50:37 UTC] PHP Warning:  include(): Failed opening '../../dbConn.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 6
+[02-Apr-2019 23:50:37 UTC] PHP Stack trace:
+[02-Apr-2019 23:50:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:50:37 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 8
+[02-Apr-2019 23:50:37 UTC] PHP Stack trace:
+[02-Apr-2019 23:50:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:51:36 UTC] PHP Warning:  include(../../dbConn.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 6
+[02-Apr-2019 23:51:36 UTC] PHP Stack trace:
+[02-Apr-2019 23:51:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:51:36 UTC] PHP Warning:  include(): Failed opening '../../dbConn.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 6
+[02-Apr-2019 23:51:36 UTC] PHP Stack trace:
+[02-Apr-2019 23:51:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[02-Apr-2019 23:51:36 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 8
+[02-Apr-2019 23:51:36 UTC] PHP Stack trace:
+[02-Apr-2019 23:51:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[04-Apr-2019 23:18:26 UTC] PHP Warning:  include(../../inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 6
+[04-Apr-2019 23:18:26 UTC] PHP Stack trace:
+[04-Apr-2019 23:18:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[04-Apr-2019 23:18:26 UTC] PHP Warning:  include(): Failed opening '../../inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 6
+[04-Apr-2019 23:18:26 UTC] PHP Stack trace:
+[04-Apr-2019 23:18:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[04-Apr-2019 23:18:26 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 8
+[04-Apr-2019 23:18:26 UTC] PHP Stack trace:
+[04-Apr-2019 23:18:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:0
+[06-Apr-2019 17:24:45 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'da39a3ee5e6b4b0d3255bfef95601890afd80709'' at line 1' in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 15
+[06-Apr-2019 17:24:53 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' AND password = 'da39a3ee5e6b4b0d3255bfef95601890afd80709'' at line 1' in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab7/loginProcess.php on line 15
