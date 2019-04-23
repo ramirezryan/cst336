@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<title>Get coordinates of the mouse pointer</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<style>
+body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+    <body>
+     
+    <style type='text/css'>
+        #info {
+            display: block;
+            position: relative;
+            margin: 0px auto;
+            width: 50%;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            font-size: 12px;
+            text-align: center;
+            color: #222;
+            background: #fff;
+        }
+        
+        .marker {
+            background-image: url('mapbox-icon.png');
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+    <div id='map'></div>
+    <pre id='info'></pre>
+    
+    <script>
+    
+        function updateLocal(lng, lat) {
+            $.ajax({
+                type: "GET",
+                url: "api/lnglat.php",
+                dataType: "json",
+                data: {
+                    "lng" : lng,
+                    "lat" : lat,
+                },
+                success: function(data, status) {
+                    for (i = 0; i < data.length; i++) {
+                        
+                        // create a HTML element for each feature
+                        var el = document.createElement('div');
+                        el.className = 'marker';
+                        
+                        // make a marker for each feature and add to the map
+                        coords = [data[i].lng, data[i].lat];
+                        new mapboxgl.Marker(el).setLngLat(coords).addTo(map);
+                    }
+                }
+            });
+        }
+    
+        mapboxgl.accessToken = 'pk.eyJ1IjoibW9iaXVzLTgiLCJhIjoiY2p1dGZsZzc3MDA0azN5bGw4emZwbDM3ayJ9.VK2uFpi4jJi-PSE0MFJ56A';
+        var map = new mapboxgl.Map({
+            container: 'map', // container id
+            style: 'mapbox://styles/mapbox/dark-v9',
+            center: [-121.9, 36.6], // starting position
+            zoom: 0 // starting zoom
+        });
+         
+        map.on('mousemove', function (e) {
+            document.getElementById('info').innerHTML =
+                // e.point is the x, y coordinates of the mousemove event relative
+                // to the top-left corner of the map
+                JSON.stringify(e.point) + '<br />' +
+                // e.lngLat is the longitude, latitude geographical position of the event
+                JSON.stringify(e.lngLat);
+        });
+        
+        map.on('click', function (e) {
+            // e.lngLat is the longitude, latitude geographical position of the event
+            var lng;
+            var lat;
+            
+            http://api.open-notify.org/iss-now.json
+            
+            $.ajax({
+                type: "GET",
+                url: "https://api.wheretheiss.at/v1/satellites/25544",
+                dataType: "json",
+                success: function(data, status) {
+                    lng = data.longitude;
+                    lat = data.latitude;
+                    updateLocal(lng, lat);
+                }
+            });
+            // $.ajax({
+            //     type: "GET",
+            //     url: "api/lnglat.php",
+            //     dataType: "json",
+            //     data: {
+            //         "lng" : lng,
+            //         "lat" : lat,
+            //     },
+            //     success: function(data, status) {
+            //         for (i = 0; i < data.length; i++) {
+                        
+            //             // create a HTML element for each feature
+            //             var el = document.createElement('div');
+            //             el.className = 'marker';
+                        
+            //             // make a marker for each feature and add to the map
+            //             coords = [data[i].lng, data[i].lat];
+            //             new mapboxgl.Marker(el).setLngLat(coords).addTo(map);
+            //         }
+            //     }
+            // });
+        });
+        
+    </script>
+     
+    </body>
+</html>
