@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset='utf-8' />
-<title>Get coordinates of the mouse pointer</title>
+<title>Where is the ISS?</title>
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
@@ -80,6 +80,7 @@ body { margin:0; padding:0; }
             document.getElementById('info').innerHTML =
                 // e.point is the x, y coordinates of the mousemove event relative
                 // to the top-left corner of the map
+                "Click on the map to find the location of the ISS." + '<br />' +
                 JSON.stringify(e.point) + '<br />' +
                 // e.lngLat is the longitude, latitude geographical position of the event
                 JSON.stringify(e.lngLat);
@@ -90,7 +91,7 @@ body { margin:0; padding:0; }
             var lng;
             var lat;
             
-            http://api.open-notify.org/iss-now.json
+            //http://api.open-notify.org/iss-now.json
             
             $.ajax({
                 type: "GET",
