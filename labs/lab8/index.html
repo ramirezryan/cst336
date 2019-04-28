@@ -17,22 +17,6 @@ img {
 </style>
 <script>
 
-    function callFavoriteAPI( action, url ) {
-        $.ajax({
-            method: "GET",
-            url: "api/favoritesAPI.php",
-            dataType: "json",
-            data: { 
-                "action": action,
-                "url": url,
-                "keyword": $("#keyword").val()
-            },
-            success: function(data, status) {
-               alert("hi");
-            } 
-        }); // ajax
-    }
-
     function searchImage() {
     
         $("#images").html("Loading...");
@@ -53,7 +37,7 @@ img {
                     
                     for (let cols=0; cols < 3; cols++) {
                         
-                       htmlString +=   "<img class='favorite' src='img/favorite.png' width='30'>";
+                      htmlString +=   "<img class='favorite' src='img/favorite.png' width='30'>";
                        htmlString +=  "<img src='"+ data[i++]+"' width='300' height='280'>";
                         
                     }//for
@@ -74,21 +58,43 @@ img {
         
         $("#images").on("click", ".favorite", function(){ 
             
+            //alert($(this).next().attr("src"));
+            
             if ( $(this).attr("src") == "img/favorite.png") {
             
                 $(this).attr("src","img/favorite_on.png");
-                callFavoriteAPI("add", $(this).next().attr("src"));
-                // add image url
-                
+                //add image url to database
+                updateFavorites("add",$(this).next().attr("src"));
             } else {
                 
                 $(this).attr("src","img/favorite.png");
-                callFavoriteAPI("delete", $(this).next().attr("src"));
-                // remove image url
+                //remove image url from database
+                updateFavorites("delete",$(this).next().attr("src"));
+                
             }
             
         });
-    });
+    
+        function updateFavorites(action,favorite) {
+                $.ajax({
+                    type: "get",
+                    url: "api/favoritesAPI.php",
+                    dataType: "json",
+                    data: {
+                      "action": action,
+                      "favorite": favorite,
+                      "keyword": $("#keyword").val()
+                    },
+                    success: function(data, status) {
+                    },
+                    complete: function(data, status) { //optional, used for debugging purposes
+                      //alert(status);
+                    }
+                  });//ajax
+            }
+    
+        
+    });//documentReady
     
 
 </script>
@@ -101,6 +107,10 @@ Keyword: <input type="text" id="keyword"/>
 <br /><br />
 
 <div id="images"></div>
+
+<form action="viewFavorites.php">
+    <button> View Favorites </button>
+</form>
 
 </body>
 </html>
