@@ -13,3 +13,19 @@ Stack trace:
 #0 /home/ubuntu/workspace/cst336/labs/lab7/delete.php(15): PDOStatement->execute()
 #1 {main}
   thrown in /home/ubuntu/workspace/cst336/labs/lab7/delete.php on line 15
+[30-Apr-2019 23:28:33 UTC] PHP Warning:  move_uploaded_file(gallery/bmlogo.png): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/labs/lab9/index.php on line 7
+[30-Apr-2019 23:28:33 UTC] PHP Stack trace:
+[30-Apr-2019 23:28:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab9/index.php:0
+[30-Apr-2019 23:28:33 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/cst336/labs/lab9/index.php:7
+[30-Apr-2019 23:28:33 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpC0BHw3' to 'gallery/bmlogo.png' in /home/ubuntu/workspace/cst336/labs/lab9/index.php on line 7
+[30-Apr-2019 23:28:33 UTC] PHP Stack trace:
+[30-Apr-2019 23:28:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab9/index.php:0
+[30-Apr-2019 23:28:33 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/cst336/labs/lab9/index.php:7
+[30-Apr-2019 23:28:55 UTC] PHP Warning:  move_uploaded_file(gallery/bmlogo.png): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/labs/lab9/index.php on line 7
+[30-Apr-2019 23:28:55 UTC] PHP Stack trace:
+[30-Apr-2019 23:28:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab9/index.php:0
+[30-Apr-2019 23:28:55 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/cst336/labs/lab9/index.php:7
+[30-Apr-2019 23:28:55 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpT8CdO3' to 'gallery/bmlogo.png' in /home/ubuntu/workspace/cst336/labs/lab9/index.php on line 7
+[30-Apr-2019 23:28:55 UTC] PHP Stack trace:
+[30-Apr-2019 23:28:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab9/index.php:0
+[30-Apr-2019 23:28:55 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/cst336/labs/lab9/index.php:7
